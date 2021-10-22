@@ -22,10 +22,10 @@ public class Sonagi_GameView extends JFrame implements ActionListener, KeyListen
 
 	private JTextField textField_1;
 	private JButton btn_gamestart;
-	private String[] work = { "¹Ùº¸", "¿ì¼öÇÏ´Ù", "¹İ¹ß", "¸¶¶óÅæ", "ÀüÇØÁö´Ù", "ÁÖÀÎ°ø", "¼Õ°¡¶ô", "¼ö½Ã·Î", "¼±¸íÇÏ´Ù", "¼öµµ²ÀÁö", "°ÇÀüÇÏ´Ù", "°¡¶ó¾É´Ù",
-			"¹ÏÀ½", "¶Ù¾î°¡´Ù", "¼û¾îÀÖ´Â", "°í¿ëÇÏ´Ù", "º¸È£ÇÏ´Ù", "ÂøÇÏ´Ù", "³ª»Ú´Ù", "¼±Ç³±â", "ÀÚ¹Ù", "ºØ¾î»§", "¼±ÅÃÇÏ´Ù", "Âù¼ºÇÏ´Ù", "¹İ´ëÇÏ´Ù", "À§Ä¡ÇÏ´Ù",
-			"»ı°¢µÇ´Ù", "±ôÂ¦", "°¨´Ù", "²Ş", "º°", "°¨", "Ã¥", "¿À´Ù", "°¡´Ù", "¼Ò³ª±â", "°¡¹æ", "ÃÊ·Ï", "ÀÏ¾î³ª´Ù", "½î´Ù", "°Üµå¶ûÀÌ", "Á¸°æÇÏ´Ù", "Á¾¼Ò¸®",
-			"°®°í½Í´Ù", "¸íÈ®ÇÏ´Ù", "¶Ñ¹÷¶Ñ¹÷", "ÇÒÀÎ", "¾ÆÀå¾ÆÀå", "»ç°ú", "°¨»ç", "ÀÌº°", "´ë±â" };
+	private String[] work = { "ë°”ë³´", "ìš°ìˆ˜í•˜ë‹¤", "ë°˜ë°œ", "ë§ˆë¼í†¤", "ì „í•´ì§€ë‹¤", "ì£¼ì¸ê³µ", "ì†ê°€ë½", "ìˆ˜ì‹œë¡œ", "ì„ ëª…í•˜ë‹¤", "ìˆ˜ë„ê¼­ì§€", "ê±´ì „í•˜ë‹¤", "ê°€ë¼ì•‰ë‹¤",
+			"ë¯¿ìŒ", "ë›°ì–´ê°€ë‹¤", "ìˆ¨ì–´ìˆëŠ”", "ê³ ìš©í•˜ë‹¤", "ë³´í˜¸í•˜ë‹¤", "ì°©í•˜ë‹¤", "ë‚˜ì˜ë‹¤", "ì„ í’ê¸°", "ìë°”", "ë¶•ì–´ë¹µ", "ì„ íƒí•˜ë‹¤", "ì°¬ì„±í•˜ë‹¤", "ë°˜ëŒ€í•˜ë‹¤", "ìœ„ì¹˜í•˜ë‹¤",
+			"ìƒê°ë˜ë‹¤", "ê¹œì§", "ê°ë‹¤", "ê¿ˆ", "ë³„", "ê°", "ì±…", "ì˜¤ë‹¤", "ê°€ë‹¤", "ì†Œë‚˜ê¸°", "ê°€ë°©", "ì´ˆë¡", "ì¼ì–´ë‚˜ë‹¤", "ì˜ë‹¤", "ê²¨ë“œë‘ì´", "ì¡´ê²½í•˜ë‹¤", "ì¢…ì†Œë¦¬",
+			"ê°–ê³ ì‹¶ë‹¤", "ëª…í™•í•˜ë‹¤", "ëšœë²…ëšœë²…", "í• ì¸", "ì•„ì¥ì•„ì¥", "ì‚¬ê³¼", "ê°ì‚¬", "ì´ë³„", "ëŒ€ê¸°" };
 	private String[] game_LV = { "level 1", "level 2", "level 3", "level 4", "level 5", "level 6", "level 7", "level 8",
 			"level 9", "level 10" };
 	private JPanel panel_Screen;
@@ -49,30 +49,30 @@ public class Sonagi_GameView extends JFrame implements ActionListener, KeyListen
 	Sonagi_main main;
 
 	public Sonagi_GameView(String Nick) {
-		NickName = Nick;// ´Ğ³×ÀÓ º¯¼ö ÀúÀå
+		NickName = Nick;// ë‹‰ë„¤ì„ ë³€ìˆ˜ ì €ì¥
 
-		// È­¸é±¸¼º
+		// í™”ë©´êµ¬ì„±
 		setSize(1200, 800);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		getContentPane().setLayout(null);
 
-		textField_1 = new JTextField();// ´Ü¾îÀÔ·Â
+		textField_1 = new JTextField();// ë‹¨ì–´ì…ë ¥
 		textField_1.setBounds(115, 631, 267, 38);
 		getContentPane().add(textField_1);
 		textField_1.setColumns(10);
 
-		list = new JList(game_LV);// ·¹º§ ¸®½ºÆ® º¸¿©ÁÖ±â
+		list = new JList(game_LV);// ë ˆë²¨ ë¦¬ìŠ¤íŠ¸ ë³´ì—¬ì£¼ê¸°
 		list.setSelectedIndex(0);
-		list.setFont(new Font("±¼¸²", Font.BOLD, 22));
+		list.setFont(new Font("êµ´ë¦¼", Font.BOLD, 22));
 		list.setBounds(986, 44, 162, 280);
 		getContentPane().add(list);
 
-		btn_gamestart = new JButton("½ÃÀÛ");// ½ÃÀÛ ¹öÆ°
-		btn_gamestart.setFont(new Font("±¼¸²", Font.BOLD, 23));
+		btn_gamestart = new JButton("ì‹œì‘");// ì‹œì‘ ë²„íŠ¼
+		btn_gamestart.setFont(new Font("êµ´ë¦¼", Font.BOLD, 23));
 		btn_gamestart.setBounds(497, 627, 105, 38);
 		getContentPane().add(btn_gamestart);
 
-		panel_Screen = new JPanel();// °ÔÀÓÈ­¸é
+		panel_Screen = new JPanel();// ê²Œì„í™”ë©´
 		panel_Screen.setBackground(Color.ORANGE);
 		panel_Screen.setForeground(Color.ORANGE);
 		panel_Screen.setBounds(43, 29, 740, 571);
@@ -80,108 +80,108 @@ public class Sonagi_GameView extends JFrame implements ActionListener, KeyListen
 		panel_Screen.setLayout(null);
 		panel_Screen.setVisible(false);
 
-		JPanel panel_1 = new JPanel(); // °ÔÀÓÈ­¸é¿¡¼­ »¡°£»ö ¼±
+		JPanel panel_1 = new JPanel(); // ê²Œì„í™”ë©´ì—ì„œ ë¹¨ê°„ìƒ‰ ì„ 
 		panel_1.setBackground(Color.RED);
 		panel_1.setBounds(50, 0, 10, 740);
 		panel_Screen.add(panel_1);
 
-		score = new JLabel("0Á¡");// Á¡¼öÆÇ
+		score = new JLabel("0ì ");// ì ìˆ˜íŒ
 		score.setHorizontalAlignment(SwingConstants.CENTER);
-		score.setFont(new Font("±¼¸²", Font.BOLD, 25));
+		score.setFont(new Font("êµ´ë¦¼", Font.BOLD, 25));
 		score.setBounds(823, 241, 149, 45);
 		getContentPane().add(score);
 
-		Label_nickname = new JLabel(Nick); //´Ğ³×ÀÓ 
+		Label_nickname = new JLabel(Nick); //ë‹‰ë„¤ì„ 
 		Label_nickname.setHorizontalAlignment(SwingConstants.CENTER);
-		Label_nickname.setFont(new Font("±¼¸²", Font.BOLD, 25));
+		Label_nickname.setFont(new Font("êµ´ë¦¼", Font.BOLD, 25));
 		Label_nickname.setBounds(823, 71, 149, 27);
 		getContentPane().add(Label_nickname);
 
-		level = new JLabel("level 1"); //·¹º§ ¸®½ºÆ®
+		level = new JLabel("level 1"); //ë ˆë²¨ ë¦¬ìŠ¤íŠ¸
 		level.setHorizontalAlignment(SwingConstants.CENTER);
-		level.setFont(new Font("±¼¸²", Font.BOLD, 24));
+		level.setFont(new Font("êµ´ë¦¼", Font.BOLD, 24));
 		level.setBounds(846, 142, 99, 42);
 		getContentPane().add(level);
 
-		panel_life1 = new JPanel(); // »ı¸í1
+		panel_life1 = new JPanel(); // ìƒëª…1
 		panel_life1.setBackground(Color.RED);
 		panel_life1.setBounds(824, 319, 26, 27);
 		getContentPane().add(panel_life1);
 
-		panel_life2 = new JPanel();// »ı¸í2
+		panel_life2 = new JPanel();// ìƒëª…2
 		panel_life2.setBackground(Color.RED);
 		panel_life2.setBounds(864, 319, 26, 27);
 		getContentPane().add(panel_life2);
 
-		panel_life3 = new JPanel(); // »ı¸í3
+		panel_life3 = new JPanel(); // ìƒëª…3
 		panel_life3.setBackground(Color.RED);
 		panel_life3.setBounds(904, 319, 26, 27);
 		getContentPane().add(panel_life3);
 
-		// °ÔÀÓ°á°úÈ­¸é
-		panel_over = new JPanel();// °ÔÀÓ°á°ú ¹é½º¶ó¿îµå 
+		// ê²Œì„ê²°ê³¼í™”ë©´
+		panel_over = new JPanel();// ê²Œì„ê²°ê³¼ ë°±ìŠ¤ë¼ìš´ë“œ 
 		panel_over.setBackground(Color.PINK);
 		panel_over.setBounds(14, 142, 794, 286);
 		panel_over.setVisible(false);
 		getContentPane().add(panel_over);
 		panel_over.setLayout(null);
 
-		lblNewLabel = new JLabel("Game Over"); // °ÔÀÓ ¿À¹ö ¶óº§ 
+		lblNewLabel = new JLabel("Game Over"); // ê²Œì„ ì˜¤ë²„ ë¼ë²¨ 
 		lblNewLabel.setBounds(0, 36, 794, 63);
 		panel_over.add(lblNewLabel);
 		lblNewLabel.setForeground(Color.RED);
-		lblNewLabel.setFont(new Font("±¼¸²", Font.BOLD, 54));
+		lblNewLabel.setFont(new Font("êµ´ë¦¼", Font.BOLD, 54));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 
-		lblNick = new JLabel("Nick");// ´Ğ³×ÀÓ 
+		lblNick = new JLabel("Nick");// ë‹‰ë„¤ì„ 
 		lblNick.setBounds(0, 115, 794, 45);
 		panel_over.add(lblNick);
 		lblNick.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNick.setForeground(Color.RED);
-		lblNick.setFont(new Font("±¼¸²", Font.BOLD, 54));
+		lblNick.setFont(new Font("êµ´ë¦¼", Font.BOLD, 54));
 
-		lblScore = new JLabel("Score"); // °ÔÀÓ°á°ú Á¡¼ö 
+		lblScore = new JLabel("Score"); // ê²Œì„ê²°ê³¼ ì ìˆ˜ 
 		lblScore.setBounds(0, 232, 794, 42);
 		panel_over.add(lblScore);
 		lblScore.setHorizontalAlignment(SwingConstants.CENTER);
 		lblScore.setForeground(Color.RED);
-		lblScore.setFont(new Font("±¼¸²", Font.BOLD, 54));
+		lblScore.setFont(new Font("êµ´ë¦¼", Font.BOLD, 54));
 
 
 		setVisible(true);
 
-		// ¹öÆ°,¸®½ºÆ®,Å° ÀÌº¥Æ®¼³Á¤¹× ÅØ½ºÆ®ÇÊµåÆ÷Ä¿½º ¼³Á¤
-		btn_gamestart.addActionListener(this); // ¹öÆ° ÀÌº¥Æ®
-		textField_1.addKeyListener(this); // Å° ÀÌº¥Æ®
-		list.addListSelectionListener(this); // ¸®½ºÆ® ÀÌº¥Æ®
-		textField_1.requestFocus(); // ÅØ½ºÆ® Æ÷Ä¿½º
+		// ë²„íŠ¼,ë¦¬ìŠ¤íŠ¸,í‚¤ ì´ë²¤íŠ¸ì„¤ì •ë° í…ìŠ¤íŠ¸í•„ë“œí¬ì»¤ìŠ¤ ì„¤ì •
+		btn_gamestart.addActionListener(this); // ë²„íŠ¼ ì´ë²¤íŠ¸
+		textField_1.addKeyListener(this); // í‚¤ ì´ë²¤íŠ¸
+		list.addListSelectionListener(this); // ë¦¬ìŠ¤íŠ¸ ì´ë²¤íŠ¸
+		textField_1.requestFocus(); // í…ìŠ¤íŠ¸ í¬ì»¤ìŠ¤
 
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 
-		// °ÔÀÓ½ÃÀÛ ¹öÆ° ÀÌº¥Æ®
+		// ê²Œì„ì‹œì‘ ë²„íŠ¼ ì´ë²¤íŠ¸
 		if (e.getSource().equals(btn_gamestart)) {
 
-			// ¶óÀÌÇÁ 0 = »ı¸íÀÌ ¸ğµÎ ÀÖ´Â°Í
+			// ë¼ì´í”„ 0 = ìƒëª…ì´ ëª¨ë‘ ìˆëŠ”ê²ƒ
 			life = 0;
-			score.setText("0Á¡"); // °ÔÀÓ½ÃÀÛ½Ã Á¡¼öÆÇ 0Á¡
-			scorenum = 0; // °ÔÀÓÁ¡¼ö º¯¼ö =0
-			// ¸¸¾à¿¡ °ÔÀÓ°á°úÈ­¸éÀÌ ¶ç¾îÁ® ÀÖÀ¸¸é º¸ÀÌÁö ¾Ê°Ô
+			score.setText("0ì "); // ê²Œì„ì‹œì‘ì‹œ ì ìˆ˜íŒ 0ì 
+			scorenum = 0; // ê²Œì„ì ìˆ˜ ë³€ìˆ˜ =0
+			// ë§Œì•½ì— ê²Œì„ê²°ê³¼í™”ë©´ì´ ë„ì–´ì ¸ ìˆìœ¼ë©´ ë³´ì´ì§€ ì•Šê²Œ
 			if (panel_over.isVisible()) {
-				panel_over.setVisible(false);// °á°úÈ­¸é ¾Èº¸ÀÌ°Ô
+				panel_over.setVisible(false);// ê²°ê³¼í™”ë©´ ì•ˆë³´ì´ê²Œ
 			}
 
-			// ´Ü¾î°¡ ¸¸µé¾îÁ® ÀÖ´ÂÁö È®ÀÎ
+			// ë‹¨ì–´ê°€ ë§Œë“¤ì–´ì ¸ ìˆëŠ”ì§€ í™•ì¸
 			if (label[0] != null) {
 				for (int i = 0; i < label.length; i++) {
-					// ¾²·¹µå°¡ µ¹¾Æ°¡°í ÀÖÀ¸¸é ÁßÁö
+					// ì“°ë ˆë“œê°€ ëŒì•„ê°€ê³  ìˆìœ¼ë©´ ì¤‘ì§€
 					if (!new Sonagi_Thead().isAlive() || !new Sonagi_Move().isAlive()) {
-						new Sonagi_Thead().interrupt();// ´Ü¾î ¾²·¹µå ÁßÁö
-						new Sonagi_Move().interrupt();// ³»·Á°¡´Â ¾²·¹µå ÁßÁö
+						new Sonagi_Thead().interrupt();// ë‹¨ì–´ ì“°ë ˆë“œ ì¤‘ì§€
+						new Sonagi_Move().interrupt();// ë‚´ë ¤ê°€ëŠ” ì“°ë ˆë“œ ì¤‘ì§€
 					}
-					// ´Ü¾î°¡ ¸¸µé¾îÁ® ÀÖ´Ù¸é ¾Èº¸ÀÌ°Ô
+					// ë‹¨ì–´ê°€ ë§Œë“¤ì–´ì ¸ ìˆë‹¤ë©´ ì•ˆë³´ì´ê²Œ
 					if (label[i] != null) {
 						label[i].setVisible(false);
 					}
@@ -189,38 +189,38 @@ public class Sonagi_GameView extends JFrame implements ActionListener, KeyListen
 				}
 			}
 
-			// °ÔÀÓ½ÃÀÛ½Ã ÅØ½ºÆ®ÇÊµå Æ÷Ä¿½º ÁÖ±â
+			// ê²Œì„ì‹œì‘ì‹œ í…ìŠ¤íŠ¸í•„ë“œ í¬ì»¤ìŠ¤ ì£¼ê¸°
 			textField_1.requestFocus();
-			// ´Ü¾î¸¦ »Ñ·ÁÁÖ´Â ¾²·¹µå ½ÇÇà
+			// ë‹¨ì–´ë¥¼ ë¿Œë ¤ì£¼ëŠ” ì“°ë ˆë“œ ì‹¤í–‰
 			new Sonagi_Thead().start();
 
 		}
 	}
 
-	// ´Ü¾î¸¦ ÀÔ·ÂÇÏ¿© µ¿ÀÏ´Ü¾î ÀÖ´ÂÁö È®ÀÎÇÏ´Â Å°ÀÌº¥Æ®
+	// ë‹¨ì–´ë¥¼ ì…ë ¥í•˜ì—¬ ë™ì¼ë‹¨ì–´ ìˆëŠ”ì§€ í™•ì¸í•˜ëŠ” í‚¤ì´ë²¤íŠ¸
 	@Override
 	public void keyPressed(KeyEvent e) {
 
-		// ¿£ÅÍÅ° ÀÌº¥Æ®
+		// ì—”í„°í‚¤ ì´ë²¤íŠ¸
 		if (e.getKeyCode() == KeyEvent.VK_ENTER) {
-			// ÅØ½ºÆ® ÇÊµå¿¡ °ªÀÌ ÀÖ´ÂÁö ¾ø´ÂÁö È®ÀÎ
+			// í…ìŠ¤íŠ¸ í•„ë“œì— ê°’ì´ ìˆëŠ”ì§€ ì—†ëŠ”ì§€ í™•ì¸
 			if (!textField_1.getText().equals("")) {
-				// String º¯¼ö¿¡ ÅØ½ºÆ® °ª ÁÖ±â
+				// String ë³€ìˆ˜ì— í…ìŠ¤íŠ¸ ê°’ ì£¼ê¸°
 				String work_answer = textField_1.getText().toString();
 				/*
-				 * ÅØ½ºÆ® ÀÔ·Â°ª°ú µ¿ÀÏÇÑ ´Ü¾î ÀÖ´ÂÁö °Ë»ç µ¿ÀÏ ´Ü¾î ÀÖÀ»½Ã ¾Èº¸ÀÌ°Ô ÇÏ°í Á¡¼ö 5Á¡ ÁÖ±â ,ÅØ½ºÆ®°ª
-				 * »èÁ¦(´Ü¾î°¡ Æ²¸®´õ¶óµµ )
+				 * í…ìŠ¤íŠ¸ ì…ë ¥ê°’ê³¼ ë™ì¼í•œ ë‹¨ì–´ ìˆëŠ”ì§€ ê²€ì‚¬ ë™ì¼ ë‹¨ì–´ ìˆì„ì‹œ ì•ˆë³´ì´ê²Œ í•˜ê³  ì ìˆ˜ 5ì  ì£¼ê¸° ,í…ìŠ¤íŠ¸ê°’
+				 * ì‚­ì œ(ë‹¨ì–´ê°€ í‹€ë¦¬ë”ë¼ë„ )
 				 * 
 				 */
 
-				for (int i = 0; i <= label.length; i++) { // µ¿ÀÏ ´Ü¾î °Ë»ç for
+				for (int i = 0; i <= label.length; i++) { // ë™ì¼ ë‹¨ì–´ ê²€ì‚¬ for
 					try {
-						if (work_answer.equals(label[i].getText())) {// µ¿ÀÏ´Ü¾î °Ë»ç
-							if (label[i].isVisible()) { // µ¿ÀÏ´Ü¾î°¡ È­¸é¿¡ º¸¿©Á® ÀÖ´ÂÁö °Ë»ç
-								scorenum = scorenum += 5; // Á¡¼ö +5
-								score.setText(scorenum + "Á¡"); // Á¡¼öÆÇ Á¡¼ö º¯°æ
-								label[i].setVisible(false);// ´Ü¾î È­¸é¿¡¼­ ¾Èº¸ÀÌ°Ô
-								textField_1.setText("");// ÅØ½ºÆ® °ª ¾ø¾Ö±â
+						if (work_answer.equals(label[i].getText())) {// ë™ì¼ë‹¨ì–´ ê²€ì‚¬
+							if (label[i].isVisible()) { // ë™ì¼ë‹¨ì–´ê°€ í™”ë©´ì— ë³´ì—¬ì ¸ ìˆëŠ”ì§€ ê²€ì‚¬
+								scorenum = scorenum += 5; // ì ìˆ˜ +5
+								score.setText(scorenum + "ì "); // ì ìˆ˜íŒ ì ìˆ˜ ë³€ê²½
+								label[i].setVisible(false);// ë‹¨ì–´ í™”ë©´ì—ì„œ ì•ˆë³´ì´ê²Œ
+								textField_1.setText("");// í…ìŠ¤íŠ¸ ê°’ ì—†ì• ê¸°
 							}
 						} else {
 							textField_1.setText("");
@@ -245,29 +245,29 @@ public class Sonagi_GameView extends JFrame implements ActionListener, KeyListen
 		// TODO Auto-generated method stub
 	}
 
-	// ´Ü¾î¸¦ ÇÏ³ª¾¿ »Ñ·ÁÁÖ´Â ¾²·¹µå
+	// ë‹¨ì–´ë¥¼ í•˜ë‚˜ì”© ë¿Œë ¤ì£¼ëŠ” ì“°ë ˆë“œ
 	class Sonagi_Thead extends Thread {
 
 		@Override
 		public void run() {
-			panel_Screen.setVisible(true);// °ÔÀÓÈ­¸é µîÀå
-			// ´Ü¾î¸¦ ·¹º§¿¡ µû¸¥ ¼Óµµ·Î °ÔÀÓÈ­¸é¿¡ x°ª ·£´ıÀ¸·Î»ı¼º
+			panel_Screen.setVisible(true);// ê²Œì„í™”ë©´ ë“±ì¥
+			// ë‹¨ì–´ë¥¼ ë ˆë²¨ì— ë”°ë¥¸ ì†ë„ë¡œ ê²Œì„í™”ë©´ì— xê°’ ëœë¤ìœ¼ë¡œìƒì„±
 			for (i = 0; i <= 10000; i++) {
 
 				try {
 
-					Random random = new Random();// ·£´ı °´Ã¼ »ı¼º
+					Random random = new Random();// ëœë¤ ê°ì²´ ìƒì„±
 
-					label[i] = new JLabel(work[random.nextInt(work.length)]);// ´Ü¾î
-																				// ·£´ıÀ¸·Î
-																				// °¡Áö°í¿È
-					label[i].setBounds(2, 0, 80, 20);// ´Ü¾î ÃÊ±â À§Ä¡ ³ôÀÌ,Æø ¼³Á¤
-					panel_Screen.add(label[i]);// ´Ü¾î Ãß°¡
-					label[i].setLocation(678,random.nextInt(670)+1);// y°ª ·£´ıÀ¸·Î º¸¿©ÁÖ±â
-					// ´Ü¾î¸¦ ¿òÁ÷ÀÌ´Â ¾²·¹µå ½ÇÇà
+					label[i] = new JLabel(work[random.nextInt(work.length)]);// ë‹¨ì–´
+																				// ëœë¤ìœ¼ë¡œ
+																				// ê°€ì§€ê³ ì˜´
+					label[i].setBounds(0, 0, 80, 20);// ë‹¨ì–´ ì´ˆê¸° ìœ„ì¹˜ í­,ë†’ì´ ì„¤ì •
+					panel_Screen.add(label[i]);// ë‹¨ì–´ ì¶”ê°€
+					label[i].setLocation(678+work.length,random.nextInt(500));// yê°’ ëœë¤ìœ¼ë¡œ ë³´ì—¬ì£¼ê¸°
+					// ë‹¨ì–´ë¥¼ ì›€ì§ì´ëŠ” ì“°ë ˆë“œ ì‹¤í–‰
 					new Sonagi_Move().start();
 
-					Thread.sleep(spd);// °ÔÀÓ·¹º§¿¡ µû¸¥ ´Ü¾î¼Óµµ
+					Thread.sleep(spd);// ê²Œì„ë ˆë²¨ì— ë”°ë¥¸ ë‹¨ì–´ì†ë„
 
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
@@ -279,58 +279,58 @@ public class Sonagi_GameView extends JFrame implements ActionListener, KeyListen
 		}
 	}
 
-	// ´Ü¾î ³»·Á°¡°í,°ÔÀÓ¿À¹ö È®ÀÎÇÏ´Â ¾²·¹µå
+	// ë‹¨ì–´ ë‚´ë ¤ê°€ê³ ,ê²Œì„ì˜¤ë²„ í™•ì¸í•˜ëŠ” ì“°ë ˆë“œ
 	class Sonagi_Move extends Thread {
 
 		@Override
 		public void run() {
 
-			// ´Ü¾î »ı¼º °¹¼ö ¸¸Å­ for µ¹·Á °¢ ´Ü¾î¸¶´Ù x°ª º¯°æ
+			// ë‹¨ì–´ ìƒì„± ê°¯ìˆ˜ ë§Œí¼ for ëŒë ¤ ê° ë‹¨ì–´ë§ˆë‹¤ xê°’ ë³€ê²½
 			for (int a = 0; a <= i; a++) {
 				if (label[a].isVisible()) {
 					int sp = label[a].getY();
 					int xp = label[a].getX();
 
-					label[a].setLocation(xp-10, sp);
+					label[a].setLocation(xp-15, sp);
 
 				}
 
-				// ´Ü¾î°¡ º¸¿©Á®ÀÖ´Â »óÅÂ·Ñ »¡°£¼±À» ³Ñ¾ú´ÂÁö È®ÀÎ
+				// ë‹¨ì–´ê°€ ë³´ì—¬ì ¸ìˆëŠ” ìƒíƒœë¡¤ ë¹¨ê°„ì„ ì„ ë„˜ì—ˆëŠ”ì§€ í™•ì¸
 				if (label[a].isVisible() && label[a].getX() < 45) {
-					label[a].setVisible(false);// ´Ü¾î°¡ ¼±À» ³ÑÀ¸¸é ´Ü¾î »ç¶óÁü
-					life++;// ¶óÀÌÇÁ 1 = »ı¸í 1¾ø¾îÁü
+					label[a].setVisible(false);// ë‹¨ì–´ê°€ ì„ ì„ ë„˜ìœ¼ë©´ ë‹¨ì–´ ì‚¬ë¼ì§
+					life++;// ë¼ì´í”„ 1 = ìƒëª… 1ì—†ì–´ì§
 				}
 			}
 
-			// ¶óÀÌÇÁ È®ÀÎ
+			// ë¼ì´í”„ í™•ì¸
 			switch (life) {
-			case 0:// »ı¸í ¸ğµÎ ÀÖÀ½
+			case 0:// ìƒëª… ëª¨ë‘ ìˆìŒ
 				panel_life1.setBackground(Color.RED);
 				panel_life2.setBackground(Color.RED);
 				panel_life3.setBackground(Color.RED);
 				break;
 
-			case 1: // »ı¸í 1°³ ¾ø¾îÁü
+			case 1: // ìƒëª… 1ê°œ ì—†ì–´ì§
 				panel_life1.setBackground(Color.BLUE);
 				panel_life2.setBackground(Color.RED);
 				panel_life3.setBackground(Color.RED);
 				break;
 
-			case 2:// »ı¸í 2 ¾ø¾îÁü
+			case 2:// ìƒëª… 2 ì—†ì–´ì§
 				panel_life1.setBackground(Color.BLUE);
 				panel_life2.setBackground(Color.BLUE);
 				panel_life3.setBackground(Color.RED);
 				break;
-			case 3:// »ı¸í 3°³ ¾ø¾îÁü °ÔÀÓ¿À¹ö
+			case 3:// ìƒëª… 3ê°œ ì—†ì–´ì§ ê²Œì„ì˜¤ë²„
 				panel_life1.setBackground(Color.BLUE);
 				panel_life2.setBackground(Color.BLUE);
 				panel_life3.setBackground(Color.BLUE);
-				// °ÔÀÓ °á°úÈ­¸é ¶ç¿ì±â
+				// ê²Œì„ ê²°ê³¼í™”ë©´ ë„ìš°ê¸°
 				panel_Screen.setVisible(false);
 				panel_over.setVisible(true);
 				lblScore.setText(score.getText());
 				lblNick.setText(NickName);
-				// ¾²·¹µå ÁßÁö
+				// ì“°ë ˆë“œ ì¤‘ì§€
 				new Sonagi_Thead().interrupt();
 				new Sonagi_Move().interrupt();
 
@@ -341,12 +341,12 @@ public class Sonagi_GameView extends JFrame implements ActionListener, KeyListen
 		}
 	}
 
-	//Main µî·Ï 
+	//Main ë“±ë¡ 
 	public void setSonagi_main(Sonagi_main main) {
 		this.main = main;
 	}
 
-	// ·¹º§¸®½ºÆ® ÀÌº¥Æ® Ã³¸®
+	// ë ˆë²¨ë¦¬ìŠ¤íŠ¸ ì´ë²¤íŠ¸ ì²˜ë¦¬
 	@Override
 	public void valueChanged(ListSelectionEvent arg0) {
 		// TODO Auto-generated method stub
@@ -355,54 +355,54 @@ public class Sonagi_GameView extends JFrame implements ActionListener, KeyListen
 
 			switch (list.getSelectedIndex()) {
 			case 0:
-				spd = 3500;// °ÔÀÓ¼Óµµ
-				str = (String) list.getSelectedValue();// ¸®½ºÆ® ÀÌ¸§ ÀúÀå
-				level.setText(str); // ·¹º§ ¶óº§¿¡ º¸¿©ÁÖ±â
+				spd = 3500;// ê²Œì„ì†ë„
+				str = (String) list.getSelectedValue();// ë¦¬ìŠ¤íŠ¸ ì´ë¦„ ì €ì¥
+				level.setText(str); // ë ˆë²¨ ë¼ë²¨ì— ë³´ì—¬ì£¼ê¸°
 				break;
 			case 1:
-				spd = 2900;// °ÔÀÓ¼Óµµ
-				str = (String) list.getSelectedValue();// ¸®½ºÆ® ÀÌ¸§ ÀúÀå
-				level.setText(str);// ·¹º§ ¶óº§¿¡ º¸¿©ÁÖ±â
+				spd = 2900;// ê²Œì„ì†ë„
+				str = (String) list.getSelectedValue();// ë¦¬ìŠ¤íŠ¸ ì´ë¦„ ì €ì¥
+				level.setText(str);// ë ˆë²¨ ë¼ë²¨ì— ë³´ì—¬ì£¼ê¸°
 				break;
 			case 2:
-				spd = 2600;// °ÔÀÓ¼Óµµ
-				str = (String) list.getSelectedValue();// ¸®½ºÆ® ÀÌ¸§ ÀúÀå
-				level.setText(str);// ·¹º§ ¶óº§¿¡ º¸¿©ÁÖ±â
+				spd = 2600;// ê²Œì„ì†ë„
+				str = (String) list.getSelectedValue();// ë¦¬ìŠ¤íŠ¸ ì´ë¦„ ì €ì¥
+				level.setText(str);// ë ˆë²¨ ë¼ë²¨ì— ë³´ì—¬ì£¼ê¸°
 				break;
 			case 3:
-				spd = 2300;// °ÔÀÓ¼Óµµ
-				str = (String) list.getSelectedValue();// ¸®½ºÆ® ÀÌ¸§ ÀúÀå
-				level.setText(str);// ·¹º§ ¶óº§¿¡ º¸¿©ÁÖ±â
+				spd = 2300;// ê²Œì„ì†ë„
+				str = (String) list.getSelectedValue();// ë¦¬ìŠ¤íŠ¸ ì´ë¦„ ì €ì¥
+				level.setText(str);// ë ˆë²¨ ë¼ë²¨ì— ë³´ì—¬ì£¼ê¸°
 				break;
 			case 4:
-				spd = 1900;// °ÔÀÓ¼Óµµ
-				str = (String) list.getSelectedValue();// ¸®½ºÆ® ÀÌ¸§ ÀúÀå
-				level.setText(str);// ·¹º§ ¶óº§¿¡ º¸¿©ÁÖ±â
+				spd = 1900;// ê²Œì„ì†ë„
+				str = (String) list.getSelectedValue();// ë¦¬ìŠ¤íŠ¸ ì´ë¦„ ì €ì¥
+				level.setText(str);// ë ˆë²¨ ë¼ë²¨ì— ë³´ì—¬ì£¼ê¸°
 				break;
 			case 5:
-				spd = 1600;// °ÔÀÓ¼Óµµ
-				str = (String) list.getSelectedValue();// ¸®½ºÆ® ÀÌ¸§ ÀúÀå
-				level.setText(str);// ·¹º§ ¶óº§¿¡ º¸¿©ÁÖ±â
+				spd = 1600;// ê²Œì„ì†ë„
+				str = (String) list.getSelectedValue();// ë¦¬ìŠ¤íŠ¸ ì´ë¦„ ì €ì¥
+				level.setText(str);// ë ˆë²¨ ë¼ë²¨ì— ë³´ì—¬ì£¼ê¸°
 				break;
 			case 6:
-				spd = 1300;// °ÔÀÓ¼Óµµ
-				str = (String) list.getSelectedValue();// ¸®½ºÆ® ÀÌ¸§ ÀúÀå
-				level.setText(str);// ·¹º§ ¶óº§¿¡ º¸¿©ÁÖ±â
+				spd = 1300;// ê²Œì„ì†ë„
+				str = (String) list.getSelectedValue();// ë¦¬ìŠ¤íŠ¸ ì´ë¦„ ì €ì¥
+				level.setText(str);// ë ˆë²¨ ë¼ë²¨ì— ë³´ì—¬ì£¼ê¸°
 				break;
 			case 7:
-				spd = 1000;// °ÔÀÓ¼Óµµ
-				str = (String) list.getSelectedValue();// ¸®½ºÆ® ÀÌ¸§ ÀúÀå
-				level.setText(str);// ·¹º§ ¶óº§¿¡ º¸¿©ÁÖ±â
+				spd = 1000;// ê²Œì„ì†ë„
+				str = (String) list.getSelectedValue();// ë¦¬ìŠ¤íŠ¸ ì´ë¦„ ì €ì¥
+				level.setText(str);// ë ˆë²¨ ë¼ë²¨ì— ë³´ì—¬ì£¼ê¸°
 				break;
 			case 8:
-				spd = 800;// °ÔÀÓ¼Óµµ
-				str = (String) list.getSelectedValue();// ¸®½ºÆ® ÀÌ¸§ ÀúÀå
-				level.setText(str);// ·¹º§ ¶óº§¿¡ º¸¿©ÁÖ±â
+				spd = 800;// ê²Œì„ì†ë„
+				str = (String) list.getSelectedValue();// ë¦¬ìŠ¤íŠ¸ ì´ë¦„ ì €ì¥
+				level.setText(str);// ë ˆë²¨ ë¼ë²¨ì— ë³´ì—¬ì£¼ê¸°
 				break;
 			case 9:
-				spd = 400;// °ÔÀÓ¼Óµµ
-				str = (String) list.getSelectedValue();// ¸®½ºÆ® ÀÌ¸§ ÀúÀå
-				level.setText(str);// ·¹º§ ¶óº§¿¡ º¸¿©ÁÖ±â
+				spd = 400;// ê²Œì„ì†ë„
+				str = (String) list.getSelectedValue();// ë¦¬ìŠ¤íŠ¸ ì´ë¦„ ì €ì¥
+				level.setText(str);// ë ˆë²¨ ë¼ë²¨ì— ë³´ì—¬ì£¼ê¸°
 
 				break;
 			default:
