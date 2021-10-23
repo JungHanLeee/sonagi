@@ -25,7 +25,7 @@ public class Sonagi_GameView extends JFrame implements ActionListener, KeyListen
 	private String[] game_LV = { "level 1", "level 2", "level 3", "level 4", "level 5", "level 6", "level 7", "level 8",
 			"level 9", "level 10" };
 	private JPanel panel_Screen;
-	public JLabel label[] = new JLabel[100000];
+	private JLabel label[] = new JLabel[100000];
 	private JLabel score;
 	private int scorenum = 0;
 	private int i = 0;
