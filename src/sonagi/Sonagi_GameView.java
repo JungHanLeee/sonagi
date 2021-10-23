@@ -22,14 +22,10 @@ public class Sonagi_GameView extends JFrame implements ActionListener, KeyListen
 
 	private JTextField textField_1;
 	private JButton btn_gamestart;
-	private String[] work = { "바보", "우수하다", "반발", "마라톤", "전해지다", "주인공", "손가락", "수시로", "선명하다", "수도꼭지", "건전하다", "가라앉다",
-			"믿음", "뛰어가다", "숨어있는", "고용하다", "보호하다", "착하다", "나쁘다", "선풍기", "자바", "붕어빵", "선택하다", "찬성하다", "반대하다", "위치하다",
-			"생각되다", "깜짝", "감다", "꿈", "별", "감", "책", "오다", "가다", "소나기", "가방", "초록", "일어나다", "쏘다", "겨드랑이", "존경하다", "종소리",
-			"갖고싶다", "명확하다", "뚜벅뚜벅", "할인", "아장아장", "사과", "감사", "이별", "대기" };
 	private String[] game_LV = { "level 1", "level 2", "level 3", "level 4", "level 5", "level 6", "level 7", "level 8",
 			"level 9", "level 10" };
 	private JPanel panel_Screen;
-	private JLabel label[] = new JLabel[10000];
+	public JLabel label[] = new JLabel[100000];
 	private JLabel score;
 	private int scorenum = 0;
 	private int i = 0;
@@ -47,7 +43,8 @@ public class Sonagi_GameView extends JFrame implements ActionListener, KeyListen
 	private JLabel lblNick;
 	private String NickName;
 	Sonagi_main main;
-
+	WordData word_create=new WordData();
+	
 	public Sonagi_GameView(String Nick) {
 		NickName = Nick;// 닉네임 변수 저장
 
@@ -155,6 +152,7 @@ public class Sonagi_GameView extends JFrame implements ActionListener, KeyListen
 		textField_1.addKeyListener(this); // 키 이벤트
 		list.addListSelectionListener(this); // 리스트 이벤트
 		textField_1.requestFocus(); // 텍스트 포커스
+		word_create.create();//word_create클래스에서 단어생성하는 create메소드 실행
 
 	}
 
@@ -215,7 +213,7 @@ public class Sonagi_GameView extends JFrame implements ActionListener, KeyListen
 
 				for (int i = 0; i <= label.length; i++) { // 동일 단어 검사 for
 					try {
-						if (work_answer.equals(label[i].getText())) {// 동일단어 검사
+						if (work_answer.equals(word_create.arr.get(i))) {// 동일단어 검사
 							if (label[i].isVisible()) { // 동일단어가 화면에 보여져 있는지 검사
 								scorenum = scorenum += 5; // 점수 +5
 								score.setText(scorenum + "점"); // 점수판 점수 변경
@@ -252,18 +250,16 @@ public class Sonagi_GameView extends JFrame implements ActionListener, KeyListen
 		public void run() {
 			panel_Screen.setVisible(true);// 게임화면 등장
 			// 단어를 레벨에 따른 속도로 게임화면에 x값 랜덤으로생성
-			for (i = 0; i <= 10000; i++) {
-
+			word_create.shuffle();// word_create클래스에서 단어순서를 섞는 shuffle메소드를 실행한다.
+			for (i = 0; i <= label.length; i++) {
+				
 				try {
 
 					Random random = new Random();// 랜덤 객체 생성
-
-					label[i] = new JLabel(work[random.nextInt(work.length)]);// 단어
-																				// 랜덤으로
-																				// 가지고옴
+					label[i] = new JLabel(word_create.arr.get(i));// 단어																				// 가지고옴
 					label[i].setBounds(0, 0, 80, 20);// 단어 초기 위치 폭,높이 설정
 					panel_Screen.add(label[i]);// 단어 추가
-					label[i].setLocation(678+work.length,random.nextInt(500));// y값 랜덤으로 보여주기
+					label[i].setLocation(678,random.nextInt(500));// y값 랜덤으로 보여주기
 					// 단어를 움직이는 쓰레드 실행
 					new Sonagi_Move().start();
 
