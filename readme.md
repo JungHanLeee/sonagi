@@ -2,7 +2,7 @@
 + 오른쪽에서 왼쪽으로 이동하는 타자게임
 # Run Screen
 
-https://user-images.githubusercontent.com/89134202/138420295-b669821c-8a4f-4671-b167-3ac01a1d8263.mp4
+https://user-images.githubusercontent.com/89134202/138673824-5feb83fd-e47f-4969-b32e-56e93a431e35.mp4
 
 # Changes
 + ```java
