@@ -260,6 +260,9 @@ public class Sonagi_GameView extends JFrame implements ActionListener, KeyListen
 					label[i].setBounds(0, 0, 80, 20);// 단어 초기 위치 폭,높이 설정
 					panel_Screen.add(label[i]);// 단어 추가
 					label[i].setLocation(678,random.nextInt(500));// y값 랜덤으로 보여주기
+					if(i%2==0) {
+						label[i].setForeground(Color.GREEN);
+					}
 					// 단어를 움직이는 쓰레드 실행
 					new Sonagi_Move().start();
 
